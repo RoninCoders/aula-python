@@ -1,6 +1,13 @@
 from flask import Flask
+from flask import jsonify
+import json
 
 app = Flask(__name__)
+
+with open("teste.json") as file:
+    data=file.read()
+
+objeto = json.loads(data)
 
 @app.route('/')
 def hello_world():
@@ -8,7 +15,7 @@ def hello_world():
 
 @app.route('/atividades', methods=['GET'])
 def getAtividades():
-    return "Todas as atividades"
+    return jsonify(objeto)
 
 @app.route('/criar', methods=['POST'])
 def criarAtividade():
