@@ -1,0 +1,5 @@
+[
+    { "complete": false, "task": "Ler documentação do flask" },
+    { "complete": false, "task": "Criar um app flask" },
+    { "complete": false, "task": "Encontrar minhas chaves" }
+]
